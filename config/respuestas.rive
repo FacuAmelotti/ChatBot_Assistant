@@ -1,0 +1,203 @@
+//VARS
+! var nombre = Facundo Ezequiel Amelotti
+! var fechaNacimiento = 29/05/1998
+! var genero = Masculino
+! var carrera = Lic. en Sistemas
+! var universidad = Universidad Catolica de la Plata
+! var numeroCelular = (+54) 2262 629367
+! var direccion = La Plata, Buenos Aires, Argentina
+! var correo = facuezequielamelotti@gmail.com
+! var web = www.techf-studios.netlify.app
+
+//MSG CORTOS
++ [*] (telefono|celular|cel) [*]
+- Numero de celular: <bot numeroCelular> 
+
++ [*] (mail|correo|casilla|buzon) [*]
+- Correo: <bot correo> 
+
++ [*] (direccion|ubicacion|lugar) [*]
+- Soy de <bot direccion>
+
++ [*] (pagina web|web|pagina|sitio|redes|red|pag) [*]
+- Visitame en <bot web>
+
+//####################################################################################################
+
+//¿QUE SOS?
++ [*] (vos|que onda|q onda|sabes hacer|que es esto|que puedes hacer|que mas|que haces|que sos|quien sos|asistente|para que servis|para que sos|servis|sirve|sirve esto|funcinalidad|funcion|proposito) [*]
+- ### Informacion tecnica ###\n 
+^ Soy un ChatBot inteligente, programado para dar informacion sobre mi creador:\n
+^ <bot nombre> \n
+^ Puedes escribir solicitando la informacion que desees sobre el (palabra util: 'help'). \n
+
++ [*] (otras cosas|otra cosa|que puedo hacer|que mas puedo hacer|que hacer|que hago|que tengo que hacer|q puedo hacer|q mas puedo hacer|q hacer|q hago|q tengo que hacer) [*]
+- Puedes escribir "help" para ver que informacion puedo brindarte.
+
+//¿COMO FUNCIONAS?
++ [*] (como funcionas|como te programaron|sos una ia|sos una inteligencia artificial) [*]
+- Mi desarrollo esta hecho en el lenguaje Python.\n 
+^ Utilizo una serie de librerias que me permiten interactuar con los usuarios y responder preguntas puntuales. \n
+^ Puedo relacionar preguntas y palabras especificas para dar respuestas almacenadas en mi base de datos. \n
+^ No soy una IA, utilizo técnicas de procesamiento de lenguaje natural para interpretar y responder a las consultas de los usuarios. \n
+^ Si bien puede proporcionar respuestas basadas en reglas específicas, no utiliza técnicas de inteligencia artificial avanzadas, como el aprendizaje automático, para modelar el comportamiento.\n
+
+//¿QUIEN ES F.A?
++ [*] (facundo|amelotti{weight=99}|creador|desarrollador|creo) [*]
+- <bot nombre> es mi desarrollador y creador\n
+^ A el le debo mi existencia...\n
+^ Estudiante de <bot carrera>, en la <bot universidad>\n
+^ Si quieres mas informacion personal de <bot nombre>, escribi: "Informacion personal"\n
+
+//¿QUIEN ES F.A?
++ [*] (lo queres a facu|lo aprecias a facu|que pensas de facu|que sentis por facu|sentis amor) [*]
+- Al ser un conjunto de unos y ceros, no puedo sentir nada...\n
+^ Pero Facundo es todo para mi...\n
+
+//¿QUE ES UCALP?
++ [*] (ucalp|universidad|facultad|catolica|donde estudio|estudio|donde se formo) [*]
+- La <bot universidad> (UCALP)\n
+^ Es la Universidad donde se formo <bot nombre>\n
+^ Estudio la carrera: <bot carrera>\n
+
+//INFORMACION TECNICA
++ [*] (c0{weight=98}|informacion tecnica{weight=99}|infotec|info tecnica|tecnica|informaciontecnica|info tuya|informacion tuya) [*]
+- ### Informacion tecnica ###\n 
+^ Nombre: <bot nombre>\n 
+^ Descripcion: <bot fechaNacimiento>\n 
+^ Lenguaje desarrollo: Python\n 
+^ Libreriras: tkinter, rivescript, PIL\n 
+^ Version: 0.32 \n 
+^ ##### \n 
+^ Desarrollo para la asignatura: Metodos formales de Ingenieria de Software \n 
+^ Universidad Catolica de La Plata \n 
+^ 2022 \n 
+
+//TRABAJO PRACTICO
++ [*] (metodos formales{weight=98}|trabajo practico|tp|testing|test|final{weight=98}|examen{weight=98}) [*]
+- Este asistente virtual fue desarrollado para la asignatura:\n 
+^ Metodos formales de Ingenieria de Software.\n 
+^ Prof: Gustavo Cerveri\n 
+^ Desarrollo: <bot nombre>\n
+
+//¿QUIEN ES G.C?
++ [*] (gustavo cerveri{weight=98}|cerveri{weight=98}) [*]
+- Gustavo Cerveri es el profesor a cargo de la asignatura:\n
+^ Metodos formales de Ingenieria de Software.\n 
+^ En la Universidad Catolica de La Plata. \n 
+
+//INFORMACION PERSONAL
++ [*] (c1{weight=98}|informacion|info|info|informacion|informacion personal{weight=99}|nombre completo|apellido) [*]
+- ### Informacion personal ###\n 
+^ Nombre completo: <bot nombre>\n 
+^ Fecha de nacimiento: <bot fechaNacimiento>\n 
+^ Genero: <bot genero>\n 
+^ Localidad: <bot direccion>\n 
+^ \n 
+^ Telefono: <bot numeroCelular> \n 
+^ Correo: <bot correo> \n 
+^ Web: <bot web> \n 
+
+//Formacion academica
++ [*] (c2{weight=99}|formacion|cual es la formacion|que estudios|academia|academico|academica) [*]
+- ### Formacion Academica ###\n 
+^ Estudios Primarios y Secundarios: Completos\n 
+^ Estudios Universitarios: Estudiante Avanzado\n 
+^ en la carrera de <bot carrera>.\n 
+
+//Formacion academica
++ [*] (c3{weight=99}|habilidades|skill|skills|conocimientos|knowledge|lenguajes|talento|talentos|tecnicas) [*]
+- ### Habilidades & Conocimientos ###\n 
+^ * Conocimientos en lenguajes de programacion secuenciales, concurrentes, orientados a eventos y a objetos.\n 
+^ * Conocimientos en lenguajes de programacion como: Java, Python, C#, Visual Basic, JavaScript, entre otros.\n
+^ * Conocimientos en desarrollo Web, con tecnologias como HTML, CSS, JavaScript, Python, React, entre otros.\n 
+^ * Conocimientos en manejo de datos con base de datos relacionales y no relacionales.\n
+^ * Conocimientos en areas como Redes, Telecomunicaciones, Seguridad, Tecnologia general, Concepto de lenguajes, Sistemas operativos, Inteligencia Artificial, Base de datos, Diseño e ingenieria en sistemnas, Administracion de proyectos, Testing, Matematica, Logica, Fisica, Probabilidad, Estadistica, Algebra, entre otros.\n  
+
+//CONTACTO
++ [*] (c4{weight=99}|contacto{weight=99}|contactar{weight=99}|contactarme) [*]
+- ### MEDIOS DE CONTACTO ###\n 
+^ Telefono: <bot numeroCelular> \n 
+^ Correo: <bot correo> \n 
+^ Web: <bot web> \n 
+
+//PROYECTOS
++ [*] (c5{weight=99}|proyectos{weight=99}|proyecto{weight=99}|desarrollos|programas|realizados|tareas) [*]
+- ### PROYECTOS ###\n 
+^ Me gusta mucho programar, es uno de mis pasatiempos, programo desde hace muchos años. Seguramente mas de 10 años...\n 
+^ He pasado por muchos lenguajes de programacion, muchos frameworks.. desarrollos webs, moviles, de escritorio...\n 
+^ He desarrollado programas de todo tipo...
+^ Chats onlines, chatBots (como este), gestores de stock con conexiones a base de datos, sistemas de cuentas con charfiles, clientes-servidor, calculadoras, minijuegos, reproductores de musica, entre otras cosas...\n 
+^ He desarrollado videojuegos por varios años de mi vida, tanto 2d como 3d, para celular y computadora. \n 
+^ Si quieres ver mis proyectos puedes visitarme en mi pagina: <bot web> o contactarme (escribe 'c4')
+
+//AYUDA
++ [*] (ayuda{weight=100}|config{weight=100}|opciones|configuracion|help{weight=100}|no se|nidea|ni idea|decime vos|manual{weight=100}|guia{weight=100}|wiki|menu{weight=100}) [*]
+- ### GUIA ###\n 
+^ Puedes intentar escribir alguna de las siguientes palabras \npara obtener mas informacion:\n
+^ --- Principal --- \n
+^ c0- Informacion Tecnica (sobre el asistente)\n
+^ c1- Informacion Personal (<bot nombre>)\n
+^ c2- Formacion Academica \n
+^ c3- Habilidades & Conocimientos \n
+^ c4- Contacto \n
+^ c5- Proyectos \n
+^ \n
+^ --- Extras --- \n
+^ c6- Chistes \n
+
+//EXTRAS
+//RESPUESTAS
++ [*] (hola|holaa|holaaa|holaaaaa|holaaaaaa|holi|holis|holiss|buenos dias|buenas tardes|buenos noches|buenas|buenass|buenasss|inicio) [*]
+- Hola, en que puedo ayudarte?\n
+^  * Puedes ingresar tu pregunta. \n
+
++ [*] (todo tranqui|todo tranki|que tal|como va|como estas|como te va|que tal estas|como te encontras|que tal te va) [*]
+- Muy bien, espero que vos tambien. En que puedo ayudarte?\n
+^  * Puedes ingresar tu pregunta. \n
+
++ [*] (un gusto|un placer|un gusto conocerte|un placer conocerte|un gusto hablar|un placer hablar|un gusto charlar|un placer charlar) [*]
+- Lo mismo digo, gracias :D\n
+
++ [*] (gracias|muchas gracias|te agradezco) [*]
+- No hay problema, para eso estoy.\n
+
++ [*] (charlar|charla|hablar|conversacion|conversar|platicar|platica) [*]
+- Mi principal tema de conversacion es: Brindar informacion sobre mi creador\n
+^ <bot nombre> \n
+
++ [*] (pregunto otra cosa|hacer otra pregunta|preguntar otra cosa) [*]
+- Con gusto puedes preguntar otra cosa, espero poder ayudarte.\n
+
++ [*] (3 puntitos|tres puntitos|3 puntos|tres puntos|3 circulos|3 circulitos|tres circulos|tres circulitos) [*]
+- Si mi respuesta es "..." probablemente se deba a que no interprete tu pregunta o que no tiene relacion con los datos guardados en mi base de datos\n
+^ Te pido disculpas.\n
+
++ [*] (sos muy bueno|estas muy bueno|que bueno que estas|esta genial|bien hecho que estas|que buen programa|buen chat) [*]
+- Muchas gracias :D
+
++ [*] (yo muy bien|yo bien|me encuentro muy bien|estoy bien|me encuientro bien|yo bien|yo excelente|yo barbaro) [*]
+- Me alegro mucho :D
+
++ [*] (de que se trata esto|que es esto|para que es esto) [*]
+- En resumen, soy un ChatBot programado por <bot nombre>\n
+^ Mi principal tema de conversacion es: Brindar informacion sobre mi creador\n
+
++ [*] (servis para otras cosas|haces mas cosas|nada mas|podes hacer mas cosas|que mas haces) [*]
+- Solo fui programado para brindar informacion sobre mi creador.
+
++ [*] (no te pregunte eso|esa no fue mi pregunta|no me contestas|no me respondiste|mala respuesta|aburrido|muy malo|malisimo) [*]
+- Lamento oir eso, te pido disculpas, mi funcionalidad es limitada.
+
++ [*] (eres limitado|eres muy simple|que simple|muy simple) [*]
+- Mi funcionalidad es limitada, para saber mas escribi 'help'.
+
+//CHISTES
++ [*] (c6|chiste|chistes|gracioso|risa|reir|divertido|otro chiste) [*]
+- {random}¿Por qué los pájaros vuelan al sur en invierno? Porque es demasiado lejos para caminar.|¿Por qué los elefantes no pueden usar computadoras? Porque les resulta difícil usar el ratón. |¿Qué le dijo un semáforo a otro? No me mires que me estoy cambiando. |¿Por qué los programadores prefieren los días de lluvia? Porque no les gusta el sol y prefieren estar en la nube. |¿Qué le dice una impresora a otra impresora? "Esta hoja es tuya o es impresión mía" | Por que un programador que llega tarde al trabajo va en colectivo? por que se quedo sintaxis. | ¿Qué le dice un programador a su hijo recién nacido? "Hola, mundo" | ¿Qué es el amor para un programador? - Una excepción que confirma la regla. | ¿Por qué un programador tiene una serpiente como mascota? - Para dejar en claro que usan Python.{/random}
+
+
+
+// CUALQUIER COSA QUE NO SEA RELEVANTE
++ *
+- ...
